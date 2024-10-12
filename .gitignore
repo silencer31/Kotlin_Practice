@@ -1,0 +1,5 @@
+# We will ignore build folder
+simple_code/build/
+simple_code/gradle/
+simple_code/.idea/
+simple_code/.gradle/
