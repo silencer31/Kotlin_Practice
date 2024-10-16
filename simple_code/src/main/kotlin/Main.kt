@@ -9,4 +9,6 @@ fun main() {
     setExamples()
 
     mapExamples()
+
+    operationExamples()
 }

@@ -34,7 +34,9 @@ fun mapExamples() {
     priceMap["Banana"] = 45
 
     // Получение элемента
+    // Если указанного ключа нет, вернётся null
     val result1 = priceMap["Chicken"]
+    // Если указанного ключа нет, вернёт указанное значение
     val result2 = priceMap.getOrDefault("Water", 0)
 
     // Сложение словарей
@@ -47,6 +49,10 @@ fun mapExamples() {
     val grades4 = grades2 - listOf("Nastya", "Vera")
 
     // Удаление элемента
+    // Удаление по ключу
+    priceMap.remove("Chicken")
 
+    // Удаление по значению. Если есть несколько одинаковых значений, удалится первый найденный.
+    priceMap.values.remove(50)
 
 }
