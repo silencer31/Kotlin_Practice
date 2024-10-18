@@ -11,6 +11,7 @@ fun moveRight(text: String, amount: Int): String {
     return text.map { c -> c + amount }.joinToString("")
 }
 
+
 fun some_funcs() {
     // Random.nextInt(20) будет выдавать числа в интервале от 0 до 19
     val hiddenNumber = Random.nextInt(20) + 1
