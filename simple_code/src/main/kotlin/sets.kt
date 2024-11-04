@@ -12,7 +12,7 @@ fun setExamples() {
     val unitedDirs = hrzDirections union vrtDirections
 
 
-    // Найти элементы, которые есть в обоих коллекциях set
+    // Найти элементы, которые есть в обеих коллекциях set
     val digits1 = setOf(1, 2, 3, 4, 5)
     val digits2 = setOf(4, 5, 6, 7, 8)
     val digits3 = digits1.intersect(digits2)

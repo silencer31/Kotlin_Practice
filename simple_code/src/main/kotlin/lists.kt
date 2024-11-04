@@ -24,7 +24,7 @@ fun listExamples() {
     val numbers = (0..9).toList()
     println("nums: ${numbers.joinToString(", ")}")
 
-    // Взять диаппазон из списка
+    // Взять диапазон из списка
     val subNumbers = numbers.subList(1, 3)
     println("sub nums: ${subNumbers.joinToString(", ")}")
 
