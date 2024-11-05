@@ -18,8 +18,20 @@ class CarGetSet(val brand: String, val model: String, val color: String = "Black
         println("Car init")
     }
 
-    var currentSpeed = 0.0
-    var fuelCount = 0.0
+    private var currentSpeed = 0.0
+        get() {
+            return field // Здесь нельзя писать имя переменной currentSpeed, т.к. иначе получится рекурсивный вызов этой функции
+        }
+        set(value) {
+            field = value // Здесь аналогично
+        }
+
+    private var fuelCount = 0.0
+        get // Тело функции не описано, но в таком виде будет возвращать значение fuelCount
+        private set
+
+    var cargoNumber = 0.0
+        private set // Если так сделать, то читать cargoNumber может кто угодно, а изменять только члены этого класса
 
     // Блоков init может быть несколько
     init {
@@ -34,5 +46,8 @@ class CarGetSet(val brand: String, val model: String, val color: String = "Black
         currentSpeed -= speed
     }
 
-    fun useF
+    // Метод доступен только методам данного класса
+    private fun useFuel(fuelCount: Double) {
+        this.fuelCount -= fuelCount
+    }
  }
